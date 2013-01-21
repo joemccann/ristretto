@@ -1,0 +1,44 @@
+{
+  "name": "Ristretto",
+  "description": "Ristretto is a REST-like optical character recognition API built on node.js",
+  "version": "0.0.1",
+  "author": {
+    "name": "Joe McCann",
+    "email": "joe@subprint.com"
+  },
+  "contributors": [
+    {
+      "name": "Joe McCann",
+      "email": "joe@subprint.com"
+    }
+  ],
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "dillinger",
+    "markdown",
+    "editor",
+    "ide",
+    "text",
+    "html",
+    "express",
+    "api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/joemccann/ristretto"
+  },
+  "engines": {
+    "node": "0.8.x"
+  },
+  "dependencies": {
+    "express": ">=3.0.0rc3",
+    "stylus": ">=0.28.2",
+    "ejs": ">=0.8.1",
+    "request": ">=2.9.203",
+    "colors": ">=0.6.0-1",
+    "nodecr": ">=0.0.4"
+  },
+  "subdomain": "ristretto"
+}
