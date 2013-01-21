@@ -13,17 +13,16 @@
     }
   ],
   "scripts": {
-    "start": "node app.js"
-  },
+     "start": "node api.js",
+     "test": "mocha -t 15000"
+   },
   "keywords": [
-    "dillinger",
-    "markdown",
-    "editor",
-    "ide",
-    "text",
-    "html",
-    "express",
-    "api"
+    "api",
+    "ocr",
+    "images",
+    "optical",
+    "character",
+    "recognition"
   ],
   "repository": {
     "type": "git",
@@ -38,7 +37,9 @@
     "ejs": ">=0.8.1",
     "request": ">=2.9.203",
     "colors": ">=0.6.0-1",
-    "nodecr": ">=0.0.4"
+    "nodecr": ">=0.0.4",
+    "mocha": ">=1.8.1",
+    "should": ">=1.2.1"
   },
   "subdomain": "ristretto"
 }
