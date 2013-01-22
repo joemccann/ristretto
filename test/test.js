@@ -3,6 +3,7 @@ var ncr = require('nodecr')
   , path = require('path')
   , mocha = require('mocha')
   , should = require('should')
+  , BetterError = require('../lib/bettererror')
   , ristretto = require('../lib/ristretto')
   , goodImgUrl = 'https://www.google.com/images/srpr/logo3w.png' 
   , notImgUrl = 'https://www.google.com' 
@@ -43,9 +44,9 @@ describe('Ristretto', function(){
 describe('Ristretto', function(){
   describe('#ocrFromUrl', function(){
     
-    it('Should match the error message of not being a proper URL.', function(done){
+    it('Should match the error message of not being a proper URL.', function itCb(done){
       
-      ristretto.ocrFromUrl(notUrl, function(err,data){
+      ristretto.ocrFromUrl(notUrl, function improperUrlCb(err,data){
         if(err){
           should.equal(err.message, 'URL is not a URL')
           done()
@@ -90,7 +91,7 @@ describe('Ristretto', function(){
       // // This url is purposely borked and doens't work
       ristretto.ocrFromUrl(brokenUrl, function(err,data){
         if(err){
-          should.equal(err.code, "ENOTFOUND")
+          should.equal(err.message, "HTTP Client issue: getaddrinfo ENOENT")
           done()
         }
         else{
