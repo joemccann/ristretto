@@ -32,9 +32,6 @@
     "node": "0.8.x"
   },
   "dependencies": {
-    "express": ">=3.0.0rc3",
-    "stylus": ">=0.28.2",
-    "ejs": ">=0.8.1",
     "request": ">=2.9.203",
     "colors": ">=0.6.0-1",
     "nodecr": ">=0.0.4",

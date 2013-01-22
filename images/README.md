@@ -1,0 +1,1 @@
+This directory is used temporarily for images that are fetched and processed with Tesseract.
