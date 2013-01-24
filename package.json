@@ -37,7 +37,9 @@
     "nodecr": ">=0.0.4",
     "mocha": ">=1.8.1",
     "should": ">=1.2.1",
-    "restify": ">=2.0.4"
+    "restify": ">=2.0.4",
+    "mime": ">=1.2.8",
+    "connect": ">=2.7.2"
   },
   "subdomain": "ristretto"
 }
