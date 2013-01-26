@@ -8,7 +8,7 @@ var server = restify.createServer()
 server.use(restify.queryParser())
 server.use(restify.jsonp())
 server.use(restify.gzipResponse())
-server.use(restify.bodyParser())
+server.use(restify.bodyParser({keepExtensions: true, uploadDir: __dirname + '/images/'}))
 
 // Required...  
 ristretto.setImagesDirectory( path.resolve(__dirname, 'images') )
@@ -33,33 +33,9 @@ function respond(req, res, next) {
 
 function respondPost(req, res, next){
   
-  var body = req.body
-  
-  var file = req.files.upload.path
-  
-  var fs = require('fs')
-  
-  // console.dir(file)
-  
-  fs.readFile(file, function(err,data){
-    if(err) return console.error(err)
-    
-    // console.log(data)
-    
-    fs.writeFile('./images/fodfs.png', data, 'binary', function writeFileToDiskCallback(err) {
-      if (err) return cb(err)
-      console.log('write')
-      res.send('Uploadeded!')
-    })
-    
-    
-  })
-  
-  
-  
-  return
+  var formObj = req.files.upload  
 
-  ristretto.ocrFromBinary(body, function(err,data){
+  ristretto.ocrFromFormObject(formObj, function(err,data){
   
     if(err){
       return res.json(err)
