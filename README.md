@@ -1,7 +1,7 @@
 Ristretto
 =
 
-<img src="http://distilleryimage1.s3.amazonaws.com/5319c072b45411e2bf2722000a1fbc66_7.jpg" style="max-width:320px;" />
+<img src="http://distilleryimage1.s3.amazonaws.com/5319c072b45411e2bf2722000a1fbc66_7.jpg" width="320" />
 
 Ristretto is an Optical Character Recognition library and API for fetching remote images from the web. It has nothing to do with Coffee.
 
