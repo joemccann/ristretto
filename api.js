@@ -49,11 +49,13 @@ function respondPost(req, res, next){
 
 
 
-// example: http://0.0.0.0:8080/api/1/https%3A%2F%2Fwww.google.com%2Fimages%2Fsrpr%2Flogo3w.png
-server.get('/api/1/:url', respond)
-server.head('/api/1/:url', respond)
+// example: http://0.0.0.0:8080/api/1?url=https://www.google.com/images/srpr/logo3w.png
+// should respond with: { ocr_text: "Google "}
 
-server.post('/api/1', respondPost)
+server.get('/api/1?:url', respond)
+server.head('/api/1?:url', respond)
+
+//server.post('/api/1', respondPost)
 
 
 server.listen(8080, function() {
